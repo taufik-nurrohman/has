@@ -29,10 +29,10 @@ Methods
 
 ### hasObjectValue(key, object)
 
-### hasString(x, string)
+### hasString(x, string, ?start)
 
-### hasStringStart(x, string)
+### hasStringStart(x, string, ?start)
 
-### hasStringEnd(x, string)
+### hasStringEnd(x, string, ?end)
 
 ### hasValue(value, array)
