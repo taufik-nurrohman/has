@@ -1,18 +1,24 @@
-const hasKey = (a, b) => a in b;
+const hasKey = (x, data) => x in data;
 const hasObjectKey = hasKey;
-const hasObjectValue = (a, b) => {
-    for (let c in b) {
-        if (a === b[c]) {
+const hasObjectValue = (x, data) => {
+    for (let datum in data) {
+        if (x === data[datum]) {
             return true;
         }
     }
     return false;
 };
-const hasValue = (a, b) => -1 !== b.indexOf(a);
+const hasString = (x, data, start) => data.includes(x, start);
+const hasStringStart = (x, data, start) => data.startsWith(x, start);
+const hasStringEnd = (x, data, end) => data.endsWith(x, end);
+const hasValue = (x, data) => -1 !== data.indexOf(x);
 
-Object.assign(exports || {}, {
+Object.assign(exports, {
     hasKey,
     hasObjectKey,
     hasObjectValue,
+    hasString,
+    hasStringStart,
+    hasStringEnd,
     hasValue
 });

@@ -25,4 +25,14 @@ Methods
 
 ### hasKey(key, object)
 
+### hasObjectKey(key, object)
+
+### hasObjectValue(key, object)
+
+### hasString(x, string)
+
+### hasStringStart(x, string)
+
+### hasStringEnd(x, string)
+
 ### hasValue(value, array)

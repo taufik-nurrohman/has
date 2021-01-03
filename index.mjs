@@ -1,11 +1,14 @@
-export const hasKey = (a, b) => a in b;
+export const hasKey = (x, data) => x in data;
 export const hasObjectKey = hasKey;
-export const hasObjectValue = (a, b) => {
-    for (let c in b) {
-        if (a === b[c]) {
+export const hasObjectValue = (x, data) => {
+    for (let datum in data) {
+        if (x === data[datum]) {
             return true;
         }
     }
     return false;
 };
-export const hasValue = (a, b) => -1 !== b.indexOf(a);
+export const hasString = (x, data, start) => data.includes(x, start);
+export const hasStringStart = (x, data, start) => data.startsWith(x, start);
+export const hasStringEnd = (x, data, end) => data.endsWith(x, end);
+export const hasValue = (x, data) => -1 !== data.indexOf(x);
